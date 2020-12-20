@@ -9,24 +9,28 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: 主页
+    text: 首页
     url: /
   archives:
+    text: 归档
     url: /archives
   tags:
+    text: 标签
     url: /tags
   th-list:
-    text: Categories
+    text: 类别
     url: /categories
   github:
+    text: github
     url: https://github.com/yscoder
     target: _blank
-  weibo:
-    url: http://www.weibo.com/ysweb
-    target: _blank
-  link:
-    text: 测试
-    url: /custom
+#  weibo:
+#    text: 微博
+#    url: http://www.weibo.com/ysweb
+#    target: _blank
+#  link:
+#    text: 测试
+#    url: /custom
 
 # 你的头像url
 avatar: /img/avatar.jpg
@@ -38,7 +42,7 @@ brand: /img/brand.jpg
 favicon: /favicon.ico
 
 # email
-email: 634206017@qq.com
+email: ocean.bai@foxmail.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
@@ -64,8 +68,10 @@ share: true
 # 是否开启打赏，关闭 reward: false
 reward:
   title: 谢谢大爷~
-  wechat: /img/wechat.jpg     #微信，关闭设为 false
-  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+#  wechat: /img/wechat.jpg     #微信，关闭设为 false
+#  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+  wechat: false     #微信，关闭设为 false
+  alipay: false     #支付宝，关闭设为 false
 
 # 是否开启搜索
 search: true
@@ -118,10 +124,10 @@ gitment: false
 
 # use gitalk://github.com/gitalk/gitalk
 gitalk: false
-#  owner: 
-#  repo: 
-#  client_id: 
-#  client_secret: 
+#  owner:
+#  repo:
+#  client_id:
+#  client_secret:
 
 # Valine Comment system. https://valine.js.org
 valine:
@@ -160,7 +166,7 @@ visit_counter:
 # 动态定义title
 title_change:
   normal: (つェ⊂)咦!又好了!
-  leave: 死鬼去哪里了！
+  leave: 快上车，要出发了！
 
 # 设置为 true 发布后将使用 unpkg cdn 最新的主题样式
 # 如果想让你的自定义样式生效，把此项设为 false
