@@ -155,6 +155,9 @@
                     for (i = 0, len = titles.length; i < len; i++) {
                         if (top > offset(titles[i]).y - headerH - 5) {
                             var prevListEle = toc.querySelector('li.active');
+                            console.log("-------1------prevListEle--" + prevListEle)
+                            console.log("-------1------titles[i]--" + titles[i])
+                            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[i].id + '"]'))
                             var currListEle = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
 
                             handleTocActive(prevListEle, currListEle);
