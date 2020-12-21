@@ -120,7 +120,7 @@
                 tocChilds[i].classList.add('post-toc-shrink');
             }
             var firstChild =
-                toc.querySelector('a[href="#' + titles[0].id + '"]')
+                toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]')
                     .nextElementSibling;
             if (firstChild) {
                 firstChild.classList.add('post-toc-expand');
@@ -158,9 +158,9 @@
                         if (top > offset(titles[i]).y - headerH - 5) {
                             var prevListEle = toc.querySelector('li.active');
                             console.log("-------1------prevListEle--" + prevListEle)
-                            console.log("-------1------titles[i]--" + titles[i])
-                            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[i].id + '"]'))
-                            var currListEle = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
+                            console.log("-------1------titles[i]--" + titles[i] ,"=====",encodeURI(titles[i].id))
+                            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + encodeURI(titles[i].id) + '"]'))
+                            var currListEle = toc.querySelector('a[href="#' + encodeURI(titles[i].id) + '"]').parentNode;
 
                             handleTocActive(prevListEle, currListEle);
                         }
@@ -169,7 +169,7 @@
                     if (top < offset(titles[0]).y) {
                         handleTocActive(
                             toc.querySelector('li.active'),
-                            toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode
+                            toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]').parentNode
                         );
                     }
                 }
