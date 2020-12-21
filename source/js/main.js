@@ -109,10 +109,9 @@
             var bannerH = $('.post-header').clientHeight,
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
-            console.log("-------1------titles[i]--" + titles[0].id)
-            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[0].id + '"]'))
-            console.log("-------1------toc.querySelector111111--" + toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]'))
-            toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]').parentNode.classList.add('active');
+            // 因为中文被做了编码处理，所以为了匹配到，这里也需要做编码
+            let titleIdEncode = encodeURI(titles[0].id);
+            toc.querySelector('a[href="#' + titleIdEncode + '"]').parentNode.classList.add('active');
 
             // Make every child shrink initially
             var tocChilds = toc.querySelectorAll('.post-toc-child');
@@ -120,7 +119,7 @@
                 tocChilds[i].classList.add('post-toc-shrink');
             }
             var firstChild =
-                toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]')
+                toc.querySelector('a[href="#' + titleIdEncode + '"]')
                     .nextElementSibling;
             if (firstChild) {
                 firstChild.classList.add('post-toc-expand');
@@ -157,11 +156,7 @@
                     for (i = 0, len = titles.length; i < len; i++) {
                         if (top > offset(titles[i]).y - headerH - 5) {
                             var prevListEle = toc.querySelector('li.active');
-                            console.log("-------1------prevListEle--" + prevListEle)
-                            console.log("-------1------titles[i]--" + titles[i] ,"=====",encodeURI(titles[i].id))
-                            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + encodeURI(titles[i].id) + '"]'))
                             var currListEle = toc.querySelector('a[href="#' + encodeURI(titles[i].id) + '"]').parentNode;
-
                             handleTocActive(prevListEle, currListEle);
                         }
                     }
