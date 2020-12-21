@@ -109,7 +109,8 @@
             var bannerH = $('.post-header').clientHeight,
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
-
+            console.log("-------1------titles[i]--" + titles[0].id)
+            console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[0].id + '"]'))
             toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
 
             // Make every child shrink initially
@@ -159,10 +160,8 @@
                             console.log("-------1------titles[i]--" + titles[i])
                             console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[i].id + '"]'))
                             var currListEle = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
-                            if (currListEle !== undefined || currListEle !== null){
-                                handleTocActive(prevListEle, currListEle);
-                            }
 
+                            handleTocActive(prevListEle, currListEle);
                         }
                     }
 
