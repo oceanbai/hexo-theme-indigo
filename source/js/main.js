@@ -111,7 +111,8 @@
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
             console.log("-------1------titles[i]--" + titles[0].id)
             console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[0].id + '"]'))
-            toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
+            console.log("-------1------toc.querySelector111111--" + toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]'))
+            toc.querySelector('a[href="#' + encodeURI(titles[0].id) + '"]').parentNode.classList.add('active');
 
             // Make every child shrink initially
             var tocChilds = toc.querySelectorAll('.post-toc-child');
