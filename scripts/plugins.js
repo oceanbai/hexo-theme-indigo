@@ -6,7 +6,6 @@ const source = (path, cache, ext) => {
     if (cache) {
         let minFile = `${path}${ext === '.js' ? '.min' : ''}${ext}`
         minFile = minFile.substr(1);
-        console.log("----------------",`${minFile}?v=${version}`,"=======",path)
         return hexo.theme.config.cdn ? `//unpkg.com/${name}@latest${minFile}` : `${minFile}`
     } else {
         return path + ext
