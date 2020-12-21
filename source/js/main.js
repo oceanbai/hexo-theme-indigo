@@ -133,7 +133,7 @@
              */
             var handleTocActive = function (prevEle, currEle) {
                 prevEle.classList.remove('active');
-                currEle.classList.add('active1');
+                currEle.classList.add('active');
 
                 var siblingChilds = currEle.parentElement.querySelectorAll('.post-toc-child');
                 for (j = 0, len1 = siblingChilds.length; j < len1; j++) {
