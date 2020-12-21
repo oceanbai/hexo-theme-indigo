@@ -159,8 +159,10 @@
                             console.log("-------1------titles[i]--" + titles[i])
                             console.log("-------1------toc.querySelector--" + toc.querySelector('a[href="#' + titles[i].id + '"]'))
                             var currListEle = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
+                            if (currListEle !== undefined || currListEle !== null){
+                                handleTocActive(prevListEle, currListEle);
+                            }
 
-                            handleTocActive(prevListEle, currListEle);
                         }
                     }
 
