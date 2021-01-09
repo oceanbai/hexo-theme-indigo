@@ -9,10 +9,17 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span><%-config.author %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%><%- theme.since_year %> - <%}%><%- date(new Date(), 'YYYY') %></span>
+        <p>
+            <span>
+		        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53042802000036" style="display:inline-block;text-decoration:none;"><img src="https://gitee.com/ocean_c/img-url/raw/master/img-url/备案图标.png" style="float:left;"/>滇公网安备 53042802000036号</a>
+	        </span>
+            <span>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+	        </span>
+            <span><%-config.author %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%><%- theme.since_year %> - <%}%><%- date(new Date(), 'YYYY') %></span>
             <span>
                 <% if(theme.ICP_license) {%>
-                <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a><br>
+                <a href="https://beian.miit.gov.cn/#/" target="_blank"><%- theme.ICP_license %></a><br>
                 <% } %>
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
