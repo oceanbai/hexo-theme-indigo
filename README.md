@@ -18,6 +18,9 @@ Material Design 风格的Hexo主题，基于 Hexo 3.0+ 制作。 [Preview](http:
 7. 基于静态数据的站内搜索，无第三方侵入。
 8. 支持文章打赏。
 
+----------------------------
+
+
 ## Useage
 
 [文档 | Document](https://github.com/yscoder/hexo-theme-indigo/wiki)
